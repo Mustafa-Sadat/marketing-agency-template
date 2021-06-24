@@ -1,0 +1,618 @@
+@import 'varaible';
+@import 'mixin';
+
+html,body{
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:$h-color;
+}
+
+p{
+    color:$p-color;
+    font-size:$size_p;
+}
+
+h1{
+    font-size:$size_h1 !important;
+    font-weight:bold;
+    @include MQ(991px){
+        font-size:$size_h1-MQ !important;
+    }
+    
+    @include MQ(767px){
+        font-size:$size_h1-MQ-s !important;
+    }
+}
+h2{
+    font-size:$size_h2 !important;
+    @include MQ(991px){
+        font-size:$size_h2-MQ !important;
+    }
+    @include MQ(767px){
+        font-size:$size_h2-MQ-s !important;
+    }
+}
+h3{
+    font-size:$size_h3 !important;
+    font-weight:bold !important;
+    @include MQ(991px){
+        font-size:$size_h3-MQ !important;
+    }
+    @include MQ(767px){
+        font-size:$size_h3-MQ-s !important;
+    }
+}
+h4{
+    font-size:$size_h4 !important;
+    @include MQ(991px){
+        font-size:$size_h4-MQ !important;
+    }
+    @include MQ(767px){
+        font-size:$size_h4-MQ-s !important;
+    }
+}
+h5{
+    font-size:$size_h5 !important;
+    @include MQ(991px){
+        font-size:$size_h5-MQ !important;
+    }
+    
+    @include MQ(767px){
+        font-size:$size_h5-MQ-s !important;
+    }
+}
+
+
+
+
+#nav-style{
+    position: absolute;
+    top:0;
+    width:100%;
+    @include MQ(767px){
+        background-color:$blue;
+        color:white !important;
+    }
+}
+
+.Logo{
+    color:$h-color;
+    font-size:20px !important;
+    &:hover{
+        color:$blue;
+    }
+}
+
+.ul-nav{
+    .li-nav{ 
+        margin:0 20px;
+        &__a{
+            color:$h-color !important;
+            &:hover{
+                color:$blue !important;
+            }
+            
+            @include MQ(767px){
+                color:$white !important;
+                display:inline-block;
+                &:hover{
+                    color:$h-color !important;
+                }
+                
+            }
+            
+        }
+        
+        &--margin{
+            margin-right:0 !important;
+        }
+        
+        
+        @include MQ(767px){
+            margin:0 0px;
+            text-align:center;
+        }
+    }
+}
+
+
+
+
+
+
+.section1{
+    
+    margin-top:60px;
+    
+    @include MQ(767px){
+        text-align:center ;
+    }
+    
+    img{
+        position: absolute;;
+        top: 0;
+        right: 0;
+        width:60%;
+        height:600px;
+        z-index:-1;
+        
+        @include MQ(1200px){
+            width:50%;
+            height:650px;
+            
+        }
+        @include MQ(1000px){
+            height:400px;
+            
+        }
+        
+        @include MQ(999px){
+            height:480px;
+            
+        }
+        
+        @include MQ(991px){
+            height:450px;
+            
+        }
+        
+        @include MQ(767px){
+            width:100%;
+            height:250px;
+            margin-top:80px;
+        }
+        
+        
+        
+    }
+    
+    .text{
+        margin-top:190px;
+        margin-left:20px;
+        
+        @include MQ(1300px){
+            
+            margin-top:180px;
+        }
+        
+        @include MQ(1200px){
+            
+            margin-top:150px;
+        }
+        
+        @include MQ(1100px){
+            
+            margin-top:130px;
+        }
+        
+        @include MQ(999px){
+            margin-left:0px;
+            margin-top:100px;
+        }
+        
+        @include MQ(767px){
+            margin-top:350px;
+        }
+        
+        
+        &__p{
+            margin:30px 0;
+            @include MQ(999px){
+                margin:20px 0;
+            }
+        }
+        
+        &__btn-blue{
+            margin:40px 0;
+            @include BTN;
+            
+            @include MQ(999px){
+                margin:20px 0;
+            }
+        }
+    }
+    
+    .ul{
+        margin:30px 0;
+        @include MQ(999px){
+            margin:20px 0;
+        }
+        
+        
+        
+        &__li{
+            float: left;
+            list-style-type: none;
+            margin:0 30px;
+            
+            @include MQ(991px){
+                margin:0 10px;
+            }
+            
+            
+            &--style{
+                margin-left:0;
+            }
+            &--span{
+                margin-right:8px;
+            }
+            
+        }
+    }
+    
+}
+
+
+.section2{
+    clear: both;
+    padding:$padding 0px;
+
+    @include MQ(1024px){
+        padding:$padding-MQ 0;
+    }
+
+    .text{
+        text-align:center;
+        margin:20px 0;
+
+        &__h3{
+            margin-bottom:20px;
+        }
+    }
+
+
+    .card{
+        border-bottom-left-radius:50px !important;
+        border-top-right-radius:20px !important;
+        padding:20px;
+        box-shadow:2px 4px 8px 0px $p-color;
+        margin:20px 0px !important;
+
+        &--blue{
+            background-image:linear-gradient(to right,blue,$blue);
+            padding:20px;
+            box-shadow:none;
+        }
+
+        &__span{
+            font-size:40px;
+            &--blue{
+                color:$white;
+            }
+        }
+
+
+        &__h4{
+            margin:20px 0;
+            &--blue{
+                color:$white;
+
+            }
+        }
+
+        &__p{
+            &--blue{
+                color:$white;
+            }
+        }
+
+
+        
+    }
+}
+
+
+.section3{
+    padding:$padding 0;
+
+    @include MQ(1024px){
+        padding:$padding-MQ 0;
+    }
+
+    img{
+        width: 100%;
+        margin:0;
+        padding:0 20px;
+    }
+
+    .text{
+        margin-top:20px;
+        padding:0 20px;
+
+        @include MQ(767px){
+            margin-top:30px;
+        }
+
+        @include MQ(767px){
+            text-align:center;
+        }
+
+        &__h3{
+            margin:0 0 20px;
+        }
+        &__h4{
+            margin:0px 0 20px;
+        }
+
+        &__p{
+            margin:20px 0;
+        }
+
+        &__a{
+            color:$blue;
+            text-decoration:none;
+
+            &:hover{
+                color:$h-color;
+            }
+
+            &--span{
+                margin-left:10px;
+            }
+        }
+    }
+}
+
+.section4{
+    padding:$padding 0;
+
+    @include MQ(1024px){
+        padding:$padding-MQ 0;
+    }
+    .text{
+        margin-top:20px;
+        padding:0 20px;
+
+        @include MQ(767px){
+            margin-top:30px;
+        }
+
+        @include MQ(767px){
+            text-align:center;
+        }
+
+        &__h3{
+            margin:0 0 20px;
+        }
+        &__h4{
+            margin:0px 0 20px;
+        }
+
+        &__p{
+            margin:20px 0;
+        }
+
+        &__a{
+            color:$blue;
+            text-decoration:none;
+
+            &:hover{
+                color:$h-color;
+            }
+
+            &--span{
+                margin-left:10px;
+            }
+        }
+    }
+
+    img{
+        width:100%;
+        padding:0 20px;
+    }
+}
+
+
+.section5{
+    padding:$padding 0;
+    @include MQ(1024px){
+        padding:$padding-MQ 0;
+    }
+
+    .text{
+        text-align:center;
+
+        &__h3{
+            margin:20px 0;
+        }
+
+        &__p{
+            margin-bottom:20px;
+        }
+
+    }
+
+
+
+    .card{
+        margin:20px 0 10px !important;
+        border:none !important;
+        padding:10px;
+        background-color:rgb(233, 233, 233);
+
+        .text{
+            margin:20px;
+            text-align: left;
+           
+            &__h4{
+                margin:10px 0; 
+            }
+        }
+
+
+    &__style{
+            background-color:$white;
+            box-shadow:3px 6px 10px 2px $p-color;
+        }
+
+    &__img{
+        width:100%;
+        height:350px;
+    }
+
+    }
+
+    .btn__style{
+        @include BTN;
+        margin:50px 0 20px;
+        background-image:linear-gradient(to right,white);
+        color:$blue;
+    }
+}
+
+
+
+.bg-img{
+    background-image: url('../icon/img.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x:-300px;
+}
+
+
+.section6{
+    clear: both;
+    padding:$padding 0;
+    @include MQ(1024px){
+        padding:$padding-MQ 0;
+    }
+    
+    
+   .card{
+       float: left;
+       width:((100%)/(4))-2%;
+       margin:1%;
+       padding:20px;
+
+       @include MQ(992px){
+        width:((100%)/(2))-2%;
+       }
+
+       @include MQ(768px){
+        width:100%-2%;
+       }
+
+   }
+    .text{
+        &__img{
+            float: left;
+            clip-path: circle(100%);
+            margin-right:20px;
+            width:50px;
+            height:50px;
+        } 
+    }
+
+}
+
+.section7{
+    clear: both;
+    padding:$padding 0;
+    @include MQ(1024px){
+        padding:$padding-MQ 0;
+    }
+
+    .input-bg{
+        padding:30px 20px;
+        border-radius:5px;
+        box-shadow:3px 6px 10px 2px $p-color;
+        &__input{
+            background-color:rgb(226, 223, 223);
+        }
+
+        &__btn{
+            @include BTN;
+            margin:20px 0 0;
+            padding:4px 30px !important;
+        }
+    }
+
+    .text{
+        margin:20px 10px;
+
+        @include MQ(767px){
+            text-align:center;
+            margin:30px 0 0;
+        }
+
+        &__h3,&__h4,&__p{
+            margin:15px 0;
+        }
+    }
+}
+
+
+.section8{
+    background-image:linear-gradient(to right,rgb(210, 210, 255),rgb(235, 235, 235));
+    padding:$padding 0;
+    text-align:center;
+    @include MQ(1024px){
+        padding:$padding-MQ 0;
+    }
+
+    .text{
+        margin:10px 0 30px;
+
+        &__h3{
+            font-weight: normal !important;
+        }
+    }
+
+    .input-bg__input{
+        border-radius:30px;
+        border:1px solid $blue;
+        background-color:rgb(235, 235, 235);
+        margin:20px 0;
+        margin-right:20px;
+        padding:0 20px;
+
+        @include MQ(767px){
+           width:100% !important;
+           margin-right:0px;
+        }
+        
+    }
+
+    .input-bg__btn{
+        @include BTN;
+        padding:6px 30px !important;
+    }
+
+}
+
+footer{
+    padding:$padding 0 $padding-MQ;
+    @include MQ(1024px){
+        padding:$padding-MQ 0 20px;
+    }
+
+    .text{
+        margin:20px 0;
+
+        .Logo{  
+            font-size:30px !important;
+            font-weight:bold;
+            color:$blue;
+            &__span{
+                font-size:30px !important;
+                font-weight:bold;
+                color:$blue;
+            }
+        }
+        &__p{
+            margin:0;
+        }
+    }
+
+    h5{
+        margin:20px 0;
+    }
+    p{
+        margin:10px 0;
+    }
+    
+}
+

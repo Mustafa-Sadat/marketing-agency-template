@@ -1,0 +1,42 @@
+@import 'varaible';
+
+
+
+
+@mixin BTN{
+        background-color:$blue;
+        background-image:linear-gradient(to right,blue,$blue);
+        border-color: $blue;
+        padding:8px 30px;
+        color:$white;
+        border-radius:60px;
+        font-size:16px;
+       
+        
+        &:hover {
+        color:$white;
+        background-color: $h-color;
+        background-image:linear-gradient(to right,$blue,$h-color);
+      }
+
+      @include MQ(767px) {
+        text-align: center !important;
+    }
+}
+
+@mixin MQ($str) {
+    @media screen and(max-width:$str) {
+        @content;
+    }
+}
+
+
+
+@include MQ(767px) {
+	.flex-button {
+		display: flex;
+		flex-direction: column;
+        width: 100%;
+        
+	}
+}
